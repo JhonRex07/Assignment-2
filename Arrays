@@ -1,0 +1,60 @@
+print("********* PROGRAMMED BY **********")
+print("********* JHON REX B. JUSAYAN **********")
+print("********* BSCOE 2-2 **********")
+
+print("\nMenu:")
+print("1 - ADD AN ELEMENT")
+print("2 - INSERT AN ELEMENT")
+print("3 - MODIFY AN ELEMENT")
+print("4 - DELETE AN ELEMENT")
+print("5 - ARRANGE IN ASCENDING ORDER")
+print("6 - ARRANGE IN DESCENDING ORDER")
+
+while True:
+    array = [1, 4, 3, 4, 4, 5, 6, 2, 56, 200]
+    index = []
+
+    menu = int(input("\nWhat do you want to do? (1-6) "))
+
+    if menu == 1:
+        print("You choose to ADD an element")
+        add = int((input("Enter the index you want to ADD: ")))
+        print("\nThe new element has been added")
+        array.append(add)
+        print("This is the new array:", array)
+
+    elif menu == 2:
+        print("You choose to INSERT an element")
+        insert = int((input("Enter the WHERE to INSERT the index: (0-9) ")))
+        inserting = int((input("Enter the index you want to INSERT: ")))
+        print("\nInserting complete")
+        array.insert(insert, inserting)
+        print("This is the new array:", array)
+
+    elif menu == 3:
+        print("You choose to MODIFY an element")
+        modify = int(input("Enter WHERE to MODIFY in the index: (0-9) "))
+        new_modification = int(input("Enter the new value to MODIFY: "))
+        print("\nModifying complete")
+        array[modify] = new_modification
+        print("This is the new array:", array)
+
+    elif menu == 4:
+        print("You choose to DELETE an element")
+        index = int(input("Enter the index you want to DELETE: (0-9) "))
+        print("\nThe element has been deleted")
+        array.pop(index)
+        print("This is the new array:", array)
+
+    elif menu == 5:
+        print("You choose to arrange in ASCENDING order")
+        array.sort()
+        print("This is the new array:", array)
+
+    elif menu == 6:
+        print("You choose to arrange in DESCENDING order")
+        array.sort(reverse=True)
+        print("This is the new array:", array)
+
+    else:
+        exit()
